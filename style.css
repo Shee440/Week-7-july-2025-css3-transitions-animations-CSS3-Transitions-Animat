@@ -1,0 +1,446 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #6e8efb;
+    margin: 25px 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+h3 {
+    color: #a777e3;
+    margin: 20px 0 10px;
+}
+
+section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+nav {
+    margin-bottom: 30px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: #6e8efb;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #f0f4ff;
+    color: #5a7de0;
+}
+
+/* Part 1: CSS3 Transitions and Animations */
+.animation-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.animation-box {
+    text-align: center;
+}
+
+.transition-box {
+    background: #6e8efb;
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 15px 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.transition-box:hover {
+    background: #a777e3;
+    transform: scale(1.05) rotate(3deg);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pulse-box {
+    background: #ff6b6b;
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 15px 0;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.7);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(255, 107, 107, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 107, 107, 0);
+    }
+}
+
+.bounce-box {
+    background: #4ecdc4;
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 15px 0;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.spin-box {
+    background: #ffbe0b;
+    color: #333;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 15px 0;
+    font-size: 2rem;
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.animation-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+button {
+    background: #6e8efb;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #5a7de0;
+    transform: translateY(-2px);
+}
+
+/* Part 2: JavaScript Functions */
+.function-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.function-box {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.format-buttons {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.format-buttons button {
+    flex: 1;
+}
+
+.output {
+    background: #eef7ff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    min-height: 50px;
+    border-left: 4px solid #6e8efb;
+}
+
+/* Part 3: Combining CSS Animations with JavaScript */
+.combined-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.combined-box {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.animated-card {
+    width: 200px;
+    height: 250px;
+    margin: 0 auto 20px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.animated-card .card-front,
+.animated-card .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.6s;
+}
+
+.animated-card .card-front {
+    background: #6e8efb;
+    color: white;
+}
+
+.animated-card .card-back {
+    background: #a777e3;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.animated-card.flipped .card-front {
+    transform: rotateY(180deg);
+}
+
+.animated-card.flipped .card-back {
+    transform: rotateY(0deg);
+}
+
+.loader-container {
+    margin: 20px 0;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    gap: 5px;
+}
+
+.loader-bar {
+    width: 8px;
+    height: 30px;
+    background: #6e8efb;
+    animation: loader 1s ease-in-out infinite;
+    border-radius: 4px;
+}
+
+.loader-bar:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.loader-bar:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.loader-bar:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+@keyframes loader {
+    0%, 100% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(1.8);
+    }
+}
+
+.loader-controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: white;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.active .modal {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.modal-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #999;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-modal:hover {
+    color: #333;
+    background: none;
+    transform: none;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: #666;
+}
+
+/* Utility classes */
+.paused {
+    animation-play-state: paused;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .animation-examples,
+    .function-examples,
+    .combined-examples {
+        grid-template-columns: 1fr;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .format-buttons {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 Animations & JavaScript Functions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>CSS3 Animations & JavaScript Functions</h1>
+        <p>Transitions, Animations, and Interactive JavaScript</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#css-section">CSS3 Animations</a></li>
+            <li><a href="#js-section">JavaScript Functions</a></li>
+            <li><a href="#combined-section">Combined Effects</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Part 1: CSS3 Transitions and Animations -->
+        <section id="css-section">
+            <h2>CSS3 Transitions and Animations</h2>
+            
+            <div class="animation-examples">
+                <div class="animation-box">
+                    <h3>Hover Transition</h3>
+                    <div class="transition-box" id="transition-demo">
+                        Hover over me
+                    </div>
+                </div>
+                
+                <div class="animation-box">
+                    <h3>Pulse Animation</h3>
+                    <div class="pulse-box">
+                        I'm pulsing!
+                    </div>
+                </div>
+                
+                <div class="animation-box">
+                    <h3>Bounce Animation</h3>
+                    <div class="bounce-box">
+                        Bounce!
+                    </div>
+                </div>
+                
+                <div class="animation-box">
+                    <h3>Spin Animation</h3>
+                    <div class="spin-box">
+                        💫
+                    </div>
+                </div>
+            </div>
+            
+            <div class="animation-controls">
+                <button id="toggle-pulse">Toggle Pulse Animation</button>
+                <button id="toggle-bounce">Toggle Bounce Animation</button>
+            </div>
+        </section>
+
+        <!-- Part 2: JavaScript Functions -->
+        <section id="js-section">
+            <h2>JavaScript Functions</h2>
+            
+            <div class="function-examples">
+                <div class="function-box">
+                    <h3>Function Parameters & Return Values</h3>
+                    <div class="input-group">
+                        <label for="num1">Number 1:</label>
+                        <input type="number" id="num1" value="5">
+                    </div>
+                    <div class="input-group">
+                        <label for="num2">Number 2:</label>
+                        <input type="number" id="num2" value="10">
+                    </div>
+                    <button id="calculate-btn">Calculate Sum</button>
+                    <div class="output" id="sum-output">Result will appear here</div>
+                </div>
+                
+                <div class="function-box">
+                    <h3>Local vs Global Scope</h3>
+                    <button id="scope-demo-btn">Demonstrate Scope</button>
+                    <div class="output" id="scope-output">
+                        Press the button to see scope in action
+                    </div>
+                </div>
+                
+                <div class="function-box">
+                    <h3>String Formatter Function</h3>
+                    <div class="input-group">
+                        <label for="text-input">Enter text:</label>
+                        <input type="text" id="text-input" value="Hello World">
+                    </div>
+                    <div class="format-buttons">
+                        <button id="uppercase-btn">UPPERCASE</button>
+                        <button id="lowercase-btn">lowercase</button>
+                        <button id="capitalize-btn">Capitalize</button>
+                    </div>
+                    <div class="output" id="text-output">Formatted text will appear here</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 3: Combining CSS Animations with JavaScript -->
+        <section id="combined-section">
+            <h2>Combining CSS Animations with JavaScript</h2>
+            
+            <div class="combined-examples">
+                <div class="combined-box">
+                    <h3>JavaScript-Triggered Animation</h3>
+                    <div class="animated-card" id="js-card">
+                        <div class="card-front">
+                            <h4>Front Side</h4>
+                            <p>Click to flip</p>
+                        </div>
+                        <div class="card-back">
+                            <h4>Back Side</h4>
+                            <p>JavaScript triggered this flip!</p>
+                        </div>
+                    </div>
+                    <button id="flip-card-btn">Flip Card</button>
+                </div>
+                
+                <div class="combined-box">
+                    <h3>Loading Animation Control</h3>
+                    <div class="loader-container">
+                        <div class="loader" id="js-loader">
+                            <div class="loader-bar"></div>
+                            <div class="loader-bar"></div>
+                            <div class="loader-bar"></div>
+                            <div class="loader-bar"></div>
+                        </div>
+                    </div>
+                    <div class="loader-controls">
+                        <button id="start-loader">Start Loading</button>
+                        <button id="stop-loader">Stop Loading</button>
+                    </div>
+                </div>
+                
+                <div class="combined-box">
+                    <h3>Popup Modal</h3>
+                    <button id="open-modal-btn">Open Modal</button>
+                    
+                    <div class="modal-overlay" id="modal-overlay">
+                        <div class="modal" id="js-modal">
+                            <div class="modal-header">
+                                <h3>Modal Title</h3>
+                                <button class="close-modal" id="close-modal-btn">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <p>This modal appears with a smooth CSS animation triggered by JavaScript!</p>
+                                <p>Click the X button or outside the modal to close it.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>CSS3 Animations & JavaScript Functions  &copy; 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
